@@ -1,25 +1,29 @@
 ---
-name: Filesys-Virtual-Async-Dispatcher
-version: 0.01
+abstract: 'Mounting multiple FsV objects in a single filesystem made possible'
 author:
   - 'Apocalypse <APOCAL@cpan.org>'
-abstract: Mounting multiple FsV objects in a single filesystem made possible
+configure_requires:
+  Module::Build: 0.36
+dynamic_config: 0
+generated_by: 'Module::Build version 0.3601'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Filesys-Virtual-Async-Dispatcher
+provides:
+  Filesys::Virtual::Async::Dispatcher:
+    file: lib/Filesys/Virtual/Async/Dispatcher.pm
+    version: 0.02
 requires:
   Errno: 0
   Fcntl: 0
   File::Spec: 0
   Filesys::Virtual::Async: 0
-build_requires:
-  Test::More: 0.86
-dynamic_config: 0
-provides:
-  Filesys::Virtual::Async::Dispatcher:
-    file: lib/Filesys/Virtual/Async/Dispatcher.pm
-    version: 0.01
-generated_by: Module::Build version 0.280801
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  perl: 5.006
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Filesys-Virtual-Async-Dispatcher
+  homepage: http://search.cpan.org/dist/Filesys-Virtual-Async-Dispatcher
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/apocalypse/perl-filesys-virtual-async-dispatcher
+version: 0.02
